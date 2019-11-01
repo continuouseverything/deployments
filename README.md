@@ -67,6 +67,7 @@ continuouseverything1/timemachine:ab8a868
 ```
 
 ## Blue Green Deployment
+![Blue Green Deployment](https://raw.githubusercontent.com/continuouseverything/deployments/master/blue_green.png)
 * Blue version currently in production.
 * Create deployment for green, with same name, different version.
 * Create service with name and version of deployment you would like to point.
