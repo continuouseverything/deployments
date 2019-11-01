@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: timemachine-1.12
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      name: timemachine
+  template:
+    metadata:
+      labels:
+        name: timemachine
+        version: "1.12"
+      name: timemachine
+    spec:
+      containers:
+      - image: continuouseverything1/timemachine:6a4cd20
+        name: timemachine

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: timemachine
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: timemachine
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: timemachine
+      name: timemachine
+    spec:
+      containers:
+      - image: continuouseverything1/timemachine:6a4cd20
+        imagePullPolicy: IfNotPresent
+        name: timemachine
