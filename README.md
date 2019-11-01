@@ -1,6 +1,7 @@
 # Deployment Strategies
 
 ## Rolling Update
+![Rolling Update](https://raw.githubusercontent.com/continuouseverything/deployments/master/rolling.png)
 * Scale up the new replication controller based on the surge count.
 * Scale down the old replication controller based on the max unavailable count.
 * Repeat this scaling until the new replication controller has reached the desired replica count and the old replication controller has been scaled to zero.
@@ -65,6 +66,7 @@ timemachine-57659ff46c-rcj8z   1/1     Running   0          8s
 $ kubectl get deployment timemachine -o json | jq -r '.spec.template.spec.containers[0].image'
 continuouseverything1/timemachine:ab8a868
 ```
+
 
 ## Blue Green Deployment
 ![Blue Green Deployment](https://raw.githubusercontent.com/continuouseverything/deployments/master/blue_green.png)
