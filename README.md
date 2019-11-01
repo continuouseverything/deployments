@@ -1,0 +1,2 @@
+# depoyments
+Kubernetes Deployment Strategies
