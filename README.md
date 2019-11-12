@@ -121,6 +121,13 @@ timemachine-1.12-9978dd6ff-qllfs   1/1     Running   0          18s
 timemachine-1.12-9978dd6ff-znd6c   1/1     Running   0          18s
 ```
 
+## Canary
+You can use the ReplicaSet to raise as many pods as necessary to get the right percentage of traffic.
+```
+kubectl edit deployment timemachine-1.12
+```
+In practice, using a service mesh may make more sense for those use cases.
+
 
 # Appendix
 
