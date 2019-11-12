@@ -122,6 +122,7 @@ timemachine-1.12-9978dd6ff-znd6c   1/1     Running   0          18s
 ```
 
 ## Canary
+![Blue Green Deployment](https://raw.githubusercontent.com/continuouseverything/deployments/master/canary.png)
 You can use the ReplicaSet to raise as many pods as necessary to get the right percentage of traffic.
 ```
 kubectl edit deployment timemachine-1.12
