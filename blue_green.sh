@@ -26,7 +26,5 @@ kubectl get pods
 echo -e "\nRelease..."
 echo "- Update service with the new version..."
 kubectl patch svc $SERVICE -p "{\"spec\":{\"selector\": {\"name\": \"${SERVICE}\", \"version\": \"${NEW_VERSION}\"}}}"
-echo "- TODO: Check that new version runs stable."
-echo "- Delete old version..."
 kubectl delete deployment $RAMPDOWN
 echo -e "... Release finished.\n"
