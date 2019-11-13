@@ -41,6 +41,7 @@ timemachine-5f7c5b7fdc-9tnqp   1/1     Running            0          4m2s
 timemachine-5f7c5b7fdc-gxfrl   1/1     Running            0          4m2s
 timemachine-5f7c5b7fdc-jhfb8   1/1     Running            0          4m2s
 
+$ kubectl get deployment timemachine -o json | jq -r '.status'
 
 $ kubectl set image deployment timemachine timemachine=continuouseverything1/timemachine:ab8a868
 
